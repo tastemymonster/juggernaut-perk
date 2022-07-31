@@ -1,0 +1,20 @@
+<config>
+		<append xpath="/lootcontainers/lootgroup[@name='perkBooksT0Day1']">
+			<item name="bookperksexyrex1"/>
+		</append>
+		
+		<append xpath="/lootcontainers/lootgroup[@name='perkBooksT0']">
+			<item name="bookperksexyrex2"/>
+			<item name="bookperksexyrex3"/>
+		</append>
+		
+		<append xpath="/lootcontainers/lootgroup[@name='perkBooksT1']">
+			<item name="bookperksexyrex4"/>
+			<item name="bookperksexyrex6"/>
+		</append>
+		
+		<append xpath="/lootcontainers/lootgroup[@name='perkBooksT2']">
+			<item name="bookperksexyrex5"/>
+			<item name="bookperksexyrex7"/>
+		</append>
+</config>

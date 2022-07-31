@@ -1,0 +1,14 @@
+<config>
+		<append xpath="/traders/trader_item_groups/trader_item_group[@name='perkBooks']">
+			<item name="bookperksexyrex1"/>
+			<item name="bookperksexyrex2"/>
+			<item name="bookperksexyrex3"/>
+		</append>
+		
+		<append xpath="/traders/trader_item_groups/trader_item_group[@name='rareBooks']">
+			<item name="bookperksexyrex4"/>
+			<item name="bookperksexyrex5"/>
+			<item name="bookperksexyrex6"/>
+			<item name="bookperksexyrex7"/>
+		</append>
+</config>

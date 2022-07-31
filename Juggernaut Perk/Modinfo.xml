@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+    <ModInfo>
+        <Name value = "Enzyte Books and Juggernaut perk."/>
+        <Description value = "Changes the Sexual Tyrannosaurus perk into a book series and replaces the per with the Juggernaut perk."/>
+        <Author value = "Tastemymonster"/>
+        <Version value = "1.0"/>
+    </ModInfo>
+</xml>

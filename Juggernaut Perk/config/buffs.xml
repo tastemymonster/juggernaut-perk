@@ -1,0 +1,66 @@
+<config>
+	
+	<append xpath="/buffs">
+	
+		<buff name="buffJuggernaut" name_key="buffJuggernautName" description_key="buffJuggernautDesc" icon="BuffJuggernaut" icon_color="0,255,0" icon_blink="true">
+			<stack_type value="replace"/>
+			<duration value="6"/>
+			<display_value value=".DeadEyeEffectDisplay"/>
+			<display_value_key value="+{0}%"/>
+
+			<effect_group>
+				<!-- 1st shot	2nd shot	3rd shot
+					T3	10	20	30
+					T4	20	30	40
+					T5	30	40	50 -->
+
+				<!-- 1st shot	2nd shot	3rd shot
+								T5	30	40	50
+				Kill Streak: Successive kills increase damage bonus by 10%, 20% to a maximum of 30%.
+				Kill Streak: Successive kills increase damage bonus by 20%, 30% to a maximum of 40%.
+				Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum of 50%. -->
+
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".DeadEyeKillCounter" operation="set" value=".1"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".DeadEyeKillCounter" operation="add" value=".1">
+					<requirement name="CVarCompare" cvar=".DeadEyeKillCounter" operation="LT" value="1"/></triggered_effect>
+
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".DeadEyeEffectBase" operation="set" value="0">
+					<requirement name="ProgressionLevel" progression_name="perkDeadEye" operation="LTE" value="3"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".DeadEyeEffectBase" operation="set" value=".1">
+					<requirement name="ProgressionLevel" progression_name="perkDeadEye" operation="Equals" value="4"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".DeadEyeEffectBase" operation="set" value=".2">
+					<requirement name="ProgressionLevel" progression_name="perkDeadEye" operation="Equals" value="5"/></triggered_effect>
+
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".DeadEyeEffectApply" operation="set" value="@.DeadEyeKillCounter"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".DeadEyeEffectApply" operation="set" value="@.DeadEyeKillCounter"/>
+
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".DeadEyeEffectApply" operation="add" value="@.DeadEyeEffectBase"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".DeadEyeEffectApply" operation="add" value="@.DeadEyeEffectBase"/>
+
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".DeadEyeEffectDisplay" operation="set" value="@.DeadEyeEffectApply"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".DeadEyeEffectDisplay" operation="set" value="@.DeadEyeEffectApply"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".DeadEyeEffectDisplay" operation="multiply" value="100"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".DeadEyeEffectDisplay" operation="multiply" value="100"/>
+				
+				<passive_effect name="EntityDamage" operation="perc_add" value="@.DeadEyeEffectApply" tags="melee">
+					<requirement name="ItemHasTags" tags="perkPummelPete,perkSkullCrusher"/>
+				</passive_effect>
+				
+				<passive_effect name="BuffResistance" operation="perc_add" value="@.DeadEyeEffectApply" tags="melee">
+					<requirement name="ItemHasTags" tags="perkPummelPete,perkSkullCrusher"/>
+				</passive_effect>
+
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".DeadEyeKillCounter" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".DeadEyeEffectDisplay" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".DeadEyeEffectApply" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".DeadEyeEffectBase" operation="set" value="0"/>
+				<!--
+				<triggered_effect trigger="onSelfBuffStart" action="LogMessage" message="   One shot buff started"/>
+				<triggered_effect trigger="onSelfBuffStack" action="LogMessage" message="   One shot buff STACKED"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar=".DeadEyeEffectApply"/>
+				-->
+			</effect_group>
+		</buff>
+	</append>
+	
+</config>

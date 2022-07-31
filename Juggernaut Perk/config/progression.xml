@@ -1,0 +1,122 @@
+<config>
+
+<remove xpath="/progression/perks/perk[@name='perkSexualTrex']" />
+
+<append xpath="/progression/skills">
+	<skill name="skillsexyrex" parent="attBooks" name_key="perksexyrexName" desc_key="perksexyrexDesc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_character"><effect_group/></skill>
+</append>
+
+<append xpath="/progression/perks">
+
+	<perk name="perksexyrex1" parent="skillsexyrex" max_level="1" base_skill_point_cost="0" name_key="perksexyrex1" desc_key="perksexyrex1Desc" long_desc_key="perksexyrex1LongDesc">
+		<effect_group>
+			<requirement name="ProgressionLevel" progression_name="perksexyrex1" operation="Equals" value="1"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.1"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.025" tags="secondary"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perksexyrex2" parent="skillsexyrex" max_level="1" base_skill_point_cost="0" name_key="perksexyrex2" desc_key="perksexyrex2Desc" long_desc_key="perksexyrex2LongDesc">
+		<effect_group>
+			<requirement name="ProgressionLevel" progression_name="perksexyrex2" operation="Equals" value="1"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.15"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.025" tags="secondary"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perksexyrex3" parent="skillsexyrex" max_level="1" base_skill_point_cost="0" name_key="perksexyrex3" desc_key="perksexyrex3Desc" long_desc_key="perksexyrex3LongDesc">
+		<effect_group>
+			<requirement name="ProgressionLevel" progression_name="perksexyrex3" operation="Equals" value="1"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.2"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.025" tags="secondary"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perksexyrex4" parent="skillsexyrex" max_level="1" base_skill_point_cost="0" name_key="perksexyrex4" desc_key="perksexyrex4Desc" long_desc_key="perksexyrex4LongDesc">
+		<effect_group>
+			<requirement name="ProgressionLevel" progression_name="perksexyrex4" operation="Equals" value="1"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.25"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.075" tags="secondary"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="perksexyrex5" parent="skillsexyrex" max_level="1" base_skill_point_cost="0" name_key="perksexyrex5" desc_key="perksexyrex5Desc" long_desc_key="perksexyrex5LongDesc">
+		<effect_group>
+			<requirement name="ProgressionLevel" progression_name="perksexyrex5" operation="Equals" value="1"/>
+				<passive_effect name="HealthMax" operation="base_add" value="30"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".3"/>
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="ItemHasTags" tags="melee"/>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="10">
+				</triggered_effect>
+		</effect_group>
+	</perk>
+	
+	<perk name="perksexyrex6" parent="skillsexyrex" max_level="1" base_skill_point_cost="0" name_key="perksexyrex6" desc_key="perksexyrex6Desc" long_desc_key="perksexyrex6LongDesc">
+		<effect_group>
+			<requirement name="ProgressionLevel" progression_name="perksexyrex6" operation="Equals" value="1"/>
+				<passive_effect name="HealthMax" operation="base_add" value="30"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value=".5"/>
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="ItemHasTags" tags="melee"/>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="10">
+				</triggered_effect>
+		</effect_group>
+	</perk>
+	
+	<perk name="perksexyrex7" parent="skillsexyrex" max_level="1" base_skill_point_cost="0" name_key="perksexyrex7" desc_key="perksexyrex7Desc" long_desc_key="perksexyrex7LongDesc">
+		<effect_group>
+			<requirement name="ProgressionLevel" progression_name="perksexyrex7" operation="Equals" value="1"/>
+				<passive_effect name="HealthMax" operation="base_add" value="40"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".2"/>
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="ItemHasTags" tags="melee"/>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="10">
+				</triggered_effect>
+		</effect_group>
+	</perk>
+	
+	<perk name="perksexyrexComplete" parent="skillsexyrex" max_level="1" base_skill_point_cost="0" name_key="perksexyrexCompleteComplete" desc_key="perksexyrexCompleteDesc" long_desc_key="perksexyrexCompleteLongDesc">
+		<effect_group>
+			<requirement name="ProgressionLevel" progression_name="perksexyrexComplete" operation="Equals" value="1"/>
+            <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.4" tags="running"/>
+			
+			<passive_effect name="StaminaMax" operation="base_add" value="100"/>
+		</effect_group>
+	</perk>	
+	
+	<perk name="perkJuggernaut" parent="skillStrengthGeneral" name_key="perkJuggernautName" desc_key="perkJuggernautDesc" icon="BuffJuggernaut">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="1" desc_key="reqStrengthLevel01"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="3" desc_key="reqStrengthLevel03"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="5" desc_key="reqStrengthLevel05"/></level_requirements>
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="7" desc_key="reqStrengthLevel07"/></level_requirements>
+			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="10" desc_key="reqStrengthLevel10"/></level_requirements>
+
+			<effect_group>
+				<passive_effect name="HealthChangeOT" operation="base_set" level="1,3,5" value=".17,.34,.68"/>
+				<passive_effect name="BuffResistance" operation="base_add" level="4" value=".90" tags="buffInjuryAbrasion,buffLegSprained,buffLegBroken,buffArmSprained,buffArmBroken,buffFatigued,buffInjuryConcussion,buffInjuryCrippled01"/>
+				<passive_effect name="BuffResistance" operation="base_add" level="4" value="1" tags="buffInjuryConcussion"/>
+				<passive_effect name="BuffResistance" operation="base_add" level="2" value=".70" tags="buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleeding,buffLaceration,buffInfectionCatch"/>
+			</effect_group>
+
+			<effect_group>
+				<requirement name="ItemHasTags" tags="perkPummelPete,perkSkullCrusher"/>
+				<requirement name="ProgressionLevel" progression_name="perkJuggernaut" operation="GTE" value="5"/>
+					<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="buffJuggernaut"/>
+
+				<effect_description level="1" desc_key="perkJuggernautRank1Desc" long_desc_key="perkJuggernautRank1LongDesc" desc_base="Non localized modder descriptions go here"/>
+				<effect_description level="2" desc_key="perkJuggernautRank2Desc" long_desc_key="perkJuggernautRank2LongDesc"/>
+				<effect_description level="3" desc_key="perkJuggernautRank3Desc" long_desc_key="perkJuggernautRank3LongDesc"/>
+				<effect_description level="4" desc_key="perkJuggernautRank4Desc" long_desc_key="perkJuggernautRank4LongDesc"/>
+				<effect_description level="5" desc_key="perkJuggernautRank5Desc" long_desc_key="perkJuggernautRank5LongDesc"/>
+			</effect_group>
+	</perk>
+	
+</append>
+</config>

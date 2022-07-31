@@ -1,0 +1,116 @@
+<config>		
+<append xpath="/items">
+	<item name="bookperksexyrex1"> 
+		<property name="Extends" value="bookFiremansAlmanacHeat"/>
+		<property name="CustomIcon" value="EnzyteBookicon"/>
+		
+		<property name="DescriptionKey" value="bookperksexyrex1LongDesc"/>
+		<property name="Unlocks" value="perksexyrex1"/>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perksexyrex1" level="-1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perksexyrexComplete" level="-1">
+				<requirement name="PerksUnlocked" skill_name="skillsexyrex" operation="GTE" value="7"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+				<requirement name="PerksUnlocked" skill_name="skillsexyrex" operation="GTE" value="7"/></triggered_effect>
+		</effect_group>
+	</item>
+
+	<item name="bookperksexyrex2"> 
+		<property name="Extends" value="bookFiremansAlmanacHeat"/>
+		<property name="CustomIcon" value="EnzyteBookicon"/>
+		
+		<property name="DescriptionKey" value="bookperksexyrex2LongDesc"/>
+		<property name="Unlocks" value="perksexyrex2"/>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perksexyrex2" level="-1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perksexyrexComplete" level="-1">
+				<requirement name="PerksUnlocked" skill_name="skillsexyrex" operation="GTE" value="7"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+				<requirement name="PerksUnlocked" skill_name="skillsexyrex" operation="GTE" value="7"/></triggered_effect>
+		</effect_group>
+	</item>
+	
+	<item name="bookperksexyrex3"> 
+		<property name="Extends" value="bookFiremansAlmanacHeat"/>
+		<property name="CustomIcon" value="EnzyteBookicon"/>
+		
+		<property name="DescriptionKey" value="bookperksexyrex3LongDesc"/>
+		<property name="Unlocks" value="perksexyrex3"/>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perksexyrex3" level="-1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perksexyrexComplete" level="-1">
+				<requirement name="PerksUnlocked" skill_name="skillsexyrex" operation="GTE" value="7"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+				<requirement name="PerksUnlocked" skill_name="skillsexyrex" operation="GTE" value="7"/></triggered_effect>
+		</effect_group>
+	</item>
+	
+	<item name="bookperksexyrex4"> 
+		<property name="Extends" value="bookFiremansAlmanacHeat"/>
+		<property name="CustomIcon" value="EnzyteBookicon"/>
+		
+		<property name="DescriptionKey" value="bookperksexyrex4LongDesc"/>
+		<property name="Unlocks" value="perksexyrex4"/>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perksexyrex4" level="-1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perksexyrexComplete" level="-1">
+				<requirement name="PerksUnlocked" skill_name="skillsexyrex" operation="GTE" value="7"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+				<requirement name="PerksUnlocked" skill_name="skillsexyrex" operation="GTE" value="7"/></triggered_effect>
+		</effect_group>
+	</item>
+	
+	<item name="bookperksexyrex5"> 
+		<property name="Extends" value="bookFiremansAlmanacHeat"/>
+		<property name="CustomIcon" value="EnzyteBookicon"/>
+		
+		<property name="DescriptionKey" value="bookperksexyrex5LongDesc"/>
+		<property name="Unlocks" value="perksexyrex5"/>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perksexyrex5" level="-1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perksexyrexComplete" level="-1">
+				<requirement name="PerksUnlocked" skill_name="skillsexyrex" operation="GTE" value="7"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+				<requirement name="PerksUnlocked" skill_name="skillsexyrex" operation="GTE" value="7"/></triggered_effect>
+		</effect_group>
+	</item>
+	
+	<item name="bookperksexyrex6"> 
+		<property name="Extends" value="bookFiremansAlmanacHeat"/>
+		<property name="CustomIcon" value="EnzyteBookicon"/>
+		
+		<property name="DescriptionKey" value="bookperksexyrex6LongDesc"/>
+		<property name="Unlocks" value="perksexyrex6"/>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perksexyrex6" level="-1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perksexyrexComplete" level="-1">
+				<requirement name="PerksUnlocked" skill_name="skillsexyrex" operation="GTE" value="7"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+				<requirement name="PerksUnlocked" skill_name="skillsexyrex" operation="GTE" value="7"/></triggered_effect>
+		</effect_group>
+	</item>
+	
+	<item name="bookperksexyrex7"> 
+		<property name="Extends" value="bookFiremansAlmanacHeat"/>
+		<property name="CustomIcon" value="EnzyteBookicon"/>
+		
+		<property name="DescriptionKey" value="bookperksexyrex7LongDesc"/>
+		<property name="Unlocks" value="perksexyrex7"/>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perksexyrex7" level="-1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perksexyrexComplete" level="-1">
+				<requirement name="PerksUnlocked" skill_name="skillsexyrex" operation="GTE" value="7"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+				<requirement name="PerksUnlocked" skill_name="skillsexyrex" operation="GTE" value="7"/></triggered_effect>
+		</effect_group>
+	</item>
+	
+</append>
+</config>
